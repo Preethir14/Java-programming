@@ -10,19 +10,23 @@ public class Solution {
         Scanner s=new Scanner (System.in);
         int a=s.nextInt();
         int b=s.nextInt();
-        if(b==1){
-            int c=s.nextInt();
-            int d=a+c;
-            System.out.println(d);
-        }
-        else if(b==2){
-            int c=s.nextInt();
-            if (c>a){
-                System.out.println("Insufficient Balance");
-            }
-        }
-        else{
-            System.out.println("Invalid Input");
+       switch(b){
+            case(1):
+                int c=s.nextInt();
+                int d=a+c;
+                System.out.println(d);
+                break;
+            case(2):
+                c=s.nextInt();
+                if (c>a){
+                    System.out.println("Insufficient Balance");
+                }
+                else{
+                    a-=c;
+                    System.out.println(a);
+                }break;
+            default:
+                System.out.println("Invalid Input");
         }
     }
 }
