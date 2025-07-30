@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String n=s.next();
+        int a=s.nextInt();
+        int b=s.nextInt();
+        int c=s.nextInt();
+        int d=s.nextInt();
+        int e=s.nextInt();
+        int tot;
+        tot=a+b+c+d+e;
+        float gd=(float)(a+b+c+d+e)/5;
+        System.out.println("Name of the Student:"+n);
+        System.out.println("Total Mark:"+tot);
+        System.out.println("Average Mark:"+gd);
+        if(gd==100)
+            System.out.println("Grade Mark:S");
+        else if(gd>=90 && gd<100)
+            System.out.println("Grade Mark:A");
+        else if(gd>=80 && gd<90)
+            System.out.println("Grade Mark:B");
+        else if(gd>=70 && gd<80)
+            System.out.println("Grade Mark:C");
+        else if(gd>=60 && gd<70)
+            System.out.println("Grade Mark:D");
+        else if(gd>=50 && gd<60)
+            System.out.println("Grade Mark:E");
+        else
+            System.out.println("Grade Mark:Fail");
+        
+    }
+}
