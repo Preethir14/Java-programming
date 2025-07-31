@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int b=n;
+        int sum=0;
+        int d =String.valueOf(n).length();
+        if(n>=100 && n<=999){
+            while(n>0){
+                int t=n%10;
+                sum+=Math.pow(t,d);
+                n/=10;
+            }
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+    }
+}
