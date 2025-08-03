@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int a[]=new int[n];
+        for(int i=0;i<n;i++){
+            a[i]=s.nextInt();
+        }
+        List<Integer> even=new ArrayList<>();
+        List<Integer> odd=new ArrayList<>();
+        for(int i=0;i<n;i++){
+            if(i%2==0)
+                even.add(a[i]);
+            else
+                odd.add(a[i]);
+        }
+        Collections.sort(even);
+        Collections.sort(odd);
+        int se=0;
+        int so=0;
+        if(even.size()>=2){
+            se=even.get(even.size() - 2);}
+        else{
+            se=even.get(0);}
+        if(odd.size()>=2){
+            so=odd.get(1);}
+        else{
+            so=odd.get(0);}
+        int sum=se+so;
+        System.out.println("Sum="+sum);
+    }
+}
