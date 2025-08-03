@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        String str=s.nextLine();
+        int f=0;
+        int h=0;
+        for(int i=0;i<str.length();i++){
+            char c=str.charAt(i);
+            if (c== '*'){
+                f++;
+            }
+            else if(c== '#'){
+                h++;
+            }
+        }
+        int d=f-h;
+        if(d==0){
+            System.out.println("0");
+        }
+        else{
+            int ad=Math.abs(d);
+            String formatted;
+            if(ad==2){
+                formatted=String.format("%02d",ad);
+            }
+            else if(ad<=1){
+                formatted=String.format("%03d",ad);
+            }
+            else{
+                formatted=Integer.toString(ad);
+            }
+        
+            System.out.println("The Difference of the character in the given string: "+formatted);
+        }
+    }
+}
